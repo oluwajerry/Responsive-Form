@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contactForm.css">
+    <link rel="shortcut icon" href="image/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <article class="contactForm">
+            <h1 id="heading__1">
+                Contact Us
+            </h1>
+            <div class="alert">
+                <img src="image/icon-success-check.svg" alt="" srcset="">
+                <h5>Message Sent!</h5>
+                <p>Thanks for completing the form. we'll be in touch soon!</p>
+            </div>
+            <form action="#" class="formInput">
+                <section class="fullname">
+                    <p class="inputField">
+                        <label for="firstName">First Name
+                        </label>
+                        <input type="text" name="firstName" id="firstName">
+                        <span class="firstNameError">This field is required</span>
+                    </p>
+                    <p class="inputField">
+                        <label for="lastName">last Name
+                        </label>
+                        <input type="text" name="lastName" id="lastName">
+                        <span class="lastNameError">This field is required</span>
+                    </p>
+                </section>
+                <p class="inputField">
+                    <label for="email">Email Address
+                    </label>
+                    <input type="email" name="email" id="email">
+                    <span class="emailError">Please enter a valid email address</span>
+                </p>
+                <section class="inputField queryTypeRadio">
+                    <label for="query">Query Type
+                    </label>
+                    <p class="radio">
+                        <input type="radio" name="query" id="general" value="0"> General Enquiry
+                    </p>
+                    <p class="radio">
+                        <input type="radio" name="query" id="support" value="1"> support Request
+                    </p>
+                    <span class="queryError">Please select a query type</span>
+                </section>
+                <p class="inputField">
+                    <label for="message">Message
+                    </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <span class="messageError">This field is required</span>
+                </p>
+                <section class="inputField consent">
+                    <input type="checkbox" id="checkbox" value="1">
+                    <p>i consent to being contacted by the team</p>checkbox
+                    <span class="consentError">To submit this form please consent to be contacted</span>
+                </section>
+                <p class="submit">
+                    <input type="submit" name="submit" id="submitBtn">
+                </p>
+            </form>
+        </article>
+    </main>
+
+    <script src="contactForm.js"></script>
+
+</body>
+</html>

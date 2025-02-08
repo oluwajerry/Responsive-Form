@@ -1,0 +1,203 @@
+/* ### Primary
+
+- Green 200 (lighter): hsl(148, 38%, 91%)
+- Green 600 (medium): hsl(169, 82%, 27%)
+- Red: hsl(0, 66%, 54%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey 500 (medium): hsl(186, 15%, 59%)
+- Grey 900 (darker): hsl(187, 24%, 22%) */
+
+
+
+
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before{
+    padding: 0;
+    margin: 0;
+}
+*::after{
+    padding: 0;
+    margin: 0;
+}
+
+/* VARIABLE */
+:root{
+    --BG-COLOR:hsl(148, 38%, 91%);
+    --BTN-COLOR:hsl(169, 82%, 27%);
+    --WARNING-COLOR: hsl(0, 66%, 54%);
+    --WHITE-COLOR:hsl(0, 0%, 100%);
+    --GRAY-COLOR:hsl(186, 15%, 59%);
+    --DARK-GRAY: hsl(187, 24%, 22%);
+    --FS:16px;
+    --PADDING-TB:5%;
+    --PADDING-SIDEWAYS:1rem;
+}
+
+/* General */
+body{
+    background-color: var(--BG-COLOR);
+    min-height: 100vh;
+    display: grid;
+    cursor: pointer;
+    padding:var(--PADDING-TB) ;
+    position: relative;
+}
+article.contactForm {
+    background-color: var(--WHITE-COLOR);
+    padding: 5%;
+    border-radius: 15px;
+}
+article h1{
+    padding: 7% 0;
+}
+label{
+    display: block;
+    margin-bottom: 5%;
+    color: var(--DARK-GRAY);
+}
+input[type = 'text'],
+input[type = 'email'],
+.radio{
+    border: 1px var(--GRAY-COLOR) solid;
+    border-radius: 5px;
+    height: 8vh;
+}
+input[type = 'text'],
+input[type = 'email'],
+textarea{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-left: 5px;
+}
+.radio{
+    margin-bottom: 5%;
+    padding: 5%;
+}
+.consent{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.consentError{
+    grid-column: span 2;
+}
+.submit{
+    margin-top: 5%;
+}
+input[type = 'submit']{
+    padding: 5%;
+    background-color: var(--BTN-COLOR);
+    color: var(--WHITE-COLOR);
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+label::after{
+    content: '*';
+}
+input:hover,
+input:focus,
+input:active{
+    border: 2px solid var(--BTN-COLOR);
+}
+
+textarea{
+    border-radius: 10px;
+}
+input[type = 'checkbox'],
+input[type = 'radio']{
+    accent-color: var(--BTN-COLOR);
+}
+span{
+    display: none;
+    margin-bottom: 10px;
+    color: var(--WARNING-COLOR);
+}
+.errorDisplay{
+    display: block;
+}
+.alert{
+    display: none;
+}
+.successMessage{
+    background-color: var(--DARK-GRAY);
+    border-radius: 10px;
+    width: 80%;
+    color:var(--GRAY-COLOR);
+    padding: 1%;
+    position: absolute;
+    top: 0%;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+.successMessage p{
+    grid-column: span 2;
+}
+.successMessage h5{
+    color: var(--WHITE-COLOR);
+} 
+@media screen and (min-width:768px) {
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    article{ 
+        width: 80%;
+    }
+    article h1{
+        padding: 3% 0;
+    }
+
+    section.fullname{
+        display: flex;
+        gap: 10px;
+    }
+    section.fullname .inputField{
+        flex: 1;
+    }
+    .queryTypeRadio{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    .queryTypeRadio label{
+        grid-column: span 2;
+    }
+    label{
+        margin-bottom: 2%;
+    }
+        input[type = 'text'],
+        textarea{
+        margin-bottom: 2%;
+    }
+    .successMessage{
+        background-color: var(--DARK-GRAY);
+        border-radius: 10px;
+        width: 30%;
+        color:var(--GRAY-COLOR);
+        padding: 1%;
+        position: absolute;
+        top: 0%;
+        display: grid;
+        grid-template-columns: 15px 1fr;
+        column-gap: 10px;
+        row-gap: 5px;
+    }
+}
+@media screen and (min-width:990px) {
+    article{ 
+        width: 50%;
+    }
+}
